@@ -14,27 +14,27 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1224 
+INFO: Helper process launched with PID 5008 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 272.180 ; gain = 65.598
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 271.625 ; gain = 64.840
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'clock' [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/clock.v:23]
-INFO: [Synth 8-638] synthesizing module 'secondsTimer' [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'clock' [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/clock.v:23]
+INFO: [Synth 8-638] synthesizing module 'secondsTimer' [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/divider.v:23]
 	Parameter constnum bound to: 50000000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'secondsTimer' (1#1) [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/divider.v:23]
-INFO: [Synth 8-638] synthesizing module 'refreshTimer' [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/refreshTimer.v:23]
+INFO: [Synth 8-256] done synthesizing module 'secondsTimer' (1#1) [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'refreshTimer' [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/refreshTimer.v:23]
 	Parameter constnum bound to: 50000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'refreshTimer' (2#1) [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/refreshTimer.v:23]
-INFO: [Synth 8-638] synthesizing module 'debouncer' [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/debouncer.v:23]
-INFO: [Synth 8-256] done synthesizing module 'debouncer' (3#1) [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/debouncer.v:23]
-INFO: [Synth 8-638] synthesizing module 'counter' [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:23]
+INFO: [Synth 8-256] done synthesizing module 'refreshTimer' (2#1) [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/refreshTimer.v:23]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/debouncer.v:23]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (3#1) [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/debouncer.v:23]
+INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:23]
 	Parameter minute bound to: 8'b00111011 
 	Parameter hour bound to: 8'b00111011 
 	Parameter hourLim bound to: 8'b00010111 
-WARNING: [Synth 8-5788] Register hr_reg in module counter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:82]
-WARNING: [Synth 8-5788] Register min_reg in module counter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:83]
-INFO: [Synth 8-256] done synthesizing module 'counter' (4#1) [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:23]
-INFO: [Synth 8-638] synthesizing module 'bcd' [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/bcd.v:23]
+WARNING: [Synth 8-5788] Register hr_reg in module counter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:82]
+WARNING: [Synth 8-5788] Register min_reg in module counter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:83]
+INFO: [Synth 8-256] done synthesizing module 'counter' (4#1) [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:23]
+INFO: [Synth 8-638] synthesizing module 'bcd' [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/bcd.v:23]
 	Parameter a bound to: 8'b11111110 
 	Parameter b bound to: 8'b11111101 
 	Parameter c bound to: 8'b11111011 
@@ -62,26 +62,30 @@ INFO: [Synth 8-638] synthesizing module 'bcd' [E:/Documents/Calvin Works/Wordclo
 	Parameter b7 bound to: 4'b0111 
 	Parameter b8 bound to: 4'b1000 
 	Parameter b9 bound to: 4'b1001 
-INFO: [Synth 8-256] done synthesizing module 'bcd' (5#1) [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/bcd.v:23]
-INFO: [Synth 8-638] synthesizing module 'downtime' [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:23]
+INFO: [Synth 8-256] done synthesizing module 'bcd' (5#1) [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/bcd.v:23]
+INFO: [Synth 8-638] synthesizing module 'downtime' [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:23]
 	Parameter minute bound to: 8'b00111011 
 	Parameter hour bound to: 8'b00111011 
 	Parameter hourLim bound to: 8'b00010111 
-INFO: [Synth 8-256] done synthesizing module 'downtime' (6#1) [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:23]
-INFO: [Synth 8-638] synthesizing module 'digits' [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:23]
+INFO: [Synth 8-256] done synthesizing module 'downtime' (6#1) [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:23]
+INFO: [Synth 8-638] synthesizing module 'digits' [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:23]
 	Parameter off bound to: 8'b11111111 
-WARNING: [Synth 8-3936] Found unconnected internal register 'activenum1_reg' and it is trimmed from '8' to '7' bits. [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:48]
-WARNING: [Synth 8-3936] Found unconnected internal register 'activenum2_reg' and it is trimmed from '8' to '7' bits. [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:49]
-WARNING: [Synth 8-3936] Found unconnected internal register 'activenum3_reg' and it is trimmed from '8' to '7' bits. [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:50]
-WARNING: [Synth 8-3936] Found unconnected internal register 'activenum4_reg' and it is trimmed from '8' to '7' bits. [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:51]
-INFO: [Synth 8-256] done synthesizing module 'digits' (7#1) [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:23]
-INFO: [Synth 8-638] synthesizing module 'bcpin' [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/round.v:23]
-INFO: [Synth 8-256] done synthesizing module 'bcpin' (8#1) [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/round.v:23]
-INFO: [Synth 8-638] synthesizing module 'ledpwm' [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/ledpwm.v:23]
+WARNING: [Synth 8-3936] Found unconnected internal register 'activenum1_reg' and it is trimmed from '8' to '7' bits. [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:48]
+WARNING: [Synth 8-3936] Found unconnected internal register 'activenum2_reg' and it is trimmed from '8' to '7' bits. [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:49]
+WARNING: [Synth 8-3936] Found unconnected internal register 'activenum3_reg' and it is trimmed from '8' to '7' bits. [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:50]
+WARNING: [Synth 8-3936] Found unconnected internal register 'activenum4_reg' and it is trimmed from '8' to '7' bits. [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:51]
+INFO: [Synth 8-256] done synthesizing module 'digits' (7#1) [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v:23]
+INFO: [Synth 8-638] synthesizing module 'bcpin' [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/round.v:23]
+INFO: [Synth 8-256] done synthesizing module 'bcpin' (8#1) [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/round.v:23]
+INFO: [Synth 8-638] synthesizing module 'ledpwm' [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/ledpwm.v:23]
 	Parameter constnum bound to: 500 - type: integer 
+	Parameter fadecycle bound to: 143 - type: integer 
 	Parameter cycle bound to: 20 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'ledpwm' (9#1) [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/ledpwm.v:23]
-INFO: [Synth 8-256] done synthesizing module 'clock' (10#1) [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/clock.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ledpwm' (9#1) [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/ledpwm.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clock' (10#1) [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/clock.v:23]
+WARNING: [Synth 8-3331] design ledpwm has unconnected port btnU
+WARNING: [Synth 8-3331] design ledpwm has unconnected port btnD
+WARNING: [Synth 8-3331] design ledpwm has unconnected port downtime
 WARNING: [Synth 8-3331] design digits has unconnected port disptime
 WARNING: [Synth 8-3331] design digits has unconnected port num1a[7]
 WARNING: [Synth 8-3331] design digits has unconnected port num1b[7]
@@ -105,9 +109,8 @@ WARNING: [Synth 8-3331] design clock has unconnected port sw[6]
 WARNING: [Synth 8-3331] design clock has unconnected port sw[5]
 WARNING: [Synth 8-3331] design clock has unconnected port sw[4]
 WARNING: [Synth 8-3331] design clock has unconnected port sw[3]
-WARNING: [Synth 8-3331] design clock has unconnected port sw[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 309.598 ; gain = 103.016
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 309.039 ; gain = 102.254
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -117,57 +120,57 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 309.598 ; gain = 103.016
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 309.039 ; gain = 102.254
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc]
-Finished Parsing XDC File [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clock_propImpl.xdc].
+Parsing XDC File [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clock_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/clock_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 605.977 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 603.191 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 605.977 ; gain = 399.395
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 603.191 ; gain = 396.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 605.977 ; gain = 399.395
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 603.191 ; gain = 396.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 605.977 ; gain = 399.395
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 603.191 ; gain = 396.406
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clk_div" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "freq" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:54]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:66]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:54]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v:66]
 INFO: [Synth 8-5546] ROM "hr" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "min" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:56]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:81]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:67]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:92]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:64]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:89]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v:100]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'digits'
 INFO: [Synth 8-5544] ROM "dp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "segm" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "anm" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/round.v:79]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/round.v:79]
 INFO: [Synth 8-5545] ROM "JA" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "JB" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "JC" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -176,10 +179,14 @@ INFO: [Synth 8-5545] ROM "JB" won't be mapped to RAM because address size (32) i
 INFO: [Synth 8-5545] ROM "JC" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "JA" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "JC" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/ledpwm.v:72]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/ledpwm.v:61]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/ledpwm.v:136]
 INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "width" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "binterval" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "binterval" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "decrease" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "decrease" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "bsets" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -198,7 +205,7 @@ INFO: [Synth 8-5545] ROM "width" won't be mapped to RAM because address size (32
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'digits'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 605.977 ; gain = 399.395
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 603.191 ; gain = 396.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -211,24 +218,25 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 7     
-	   2 Input      8 Bit       Adders := 12    
+	   2 Input     32 Bit       Adders := 8     
+	   2 Input      8 Bit       Adders := 10    
 	   2 Input      4 Bit       Adders := 73    
 +---Registers : 
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 4     
 	               16 Bit    Registers := 5     
-	                8 Bit    Registers := 19    
+	                8 Bit    Registers := 17    
 	                7 Bit    Registers := 5     
 	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 14    
+	                1 Bit    Registers := 13    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 9     
+	   2 Input     32 Bit        Muxes := 10    
 	   4 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 28    
 	   5 Input      8 Bit        Muxes := 2     
 	  11 Input      8 Bit        Muxes := 12    
 	   6 Input      8 Bit        Muxes := 2     
 	   7 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 9     
 	  12 Input      7 Bit        Muxes := 1     
 	  10 Input      7 Bit        Muxes := 1     
@@ -239,8 +247,8 @@ Detailed RTL Component Info :
 	   6 Input      5 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 47    
 	  12 Input      4 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 16    
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
 	  12 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -340,18 +348,18 @@ Detailed RTL Component Info :
 Module ledpwm 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
 	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 7     
-	                1 Bit    Registers := 2     
+	                8 Bit    Registers := 5     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 4     
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -364,7 +372,7 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 605.977 ; gain = 399.395
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 603.191 ; gain = 396.406
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -372,12 +380,19 @@ INFO: [Synth 8-5546] ROM "min" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "hr" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "JA" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "JC" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "binterval" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "binterval" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "decrease" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "decrease" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "width" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "secTimer/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "secTimer/clk_div" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "refTimer/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "refTimer/freq" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design ledpwm has unconnected port btnU
+WARNING: [Synth 8-3331] design ledpwm has unconnected port btnD
+WARNING: [Synth 8-3331] design ledpwm has unconnected port downtime
 WARNING: [Synth 8-3331] design digits has unconnected port disptime
 WARNING: [Synth 8-3331] design digits has unconnected port num1a[7]
 WARNING: [Synth 8-3331] design digits has unconnected port num1b[7]
@@ -401,11 +416,10 @@ WARNING: [Synth 8-3331] design clock has unconnected port sw[6]
 WARNING: [Synth 8-3331] design clock has unconnected port sw[5]
 WARNING: [Synth 8-3331] design clock has unconnected port sw[4]
 WARNING: [Synth 8-3331] design clock has unconnected port sw[3]
-WARNING: [Synth 8-3331] design clock has unconnected port sw[2]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 605.977 ; gain = 399.395
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:49 . Memory (MB): peak = 603.191 ; gain = 396.406
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 605.977 ; gain = 399.395
+Finished Parallel Reinference  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:49 . Memory (MB): peak = 603.191 ; gain = 396.406
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -424,6 +438,41 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ledpwm/l
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ledpwm/led_reg[13] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ledpwm/led_reg[14] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ledpwm/led_reg[15] )
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[15]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[14]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[13]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[12]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[11]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[10]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[9]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[8]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[7]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[6]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[5]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[4]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[3]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[2]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[1]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnFilter_reg[0]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnU/btnOut_reg) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[15]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[14]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[13]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[12]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[11]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[10]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[9]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[8]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[7]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[6]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[5]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[4]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[3]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[2]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[1]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnFilter_reg[0]) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (dbbtnD/btnOut_reg) is unused and will be removed from module clock.
+WARNING: [Synth 8-3332] Sequential element (downtimer/down_reg) is unused and will be removed from module clock.
 WARNING: [Synth 8-3332] Sequential element (ledpwm/led_reg[15]) is unused and will be removed from module clock.
 WARNING: [Synth 8-3332] Sequential element (ledpwm/led_reg[14]) is unused and will be removed from module clock.
 WARNING: [Synth 8-3332] Sequential element (ledpwm/led_reg[13]) is unused and will be removed from module clock.
@@ -436,9 +485,9 @@ WARNING: [Synth 8-3332] Sequential element (ledpwm/JB_reg[5]) is unused and will
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\bin2pin/JA_reg[0] )
 WARNING: [Synth 8-3332] Sequential element (bin2pin/JA_reg[0]) is unused and will be removed from module clock.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 605.977 ; gain = 399.395
+Finished Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:01:00 . Memory (MB): peak = 603.191 ; gain = 396.406
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 605.977 ; gain = 399.395
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:49 ; elapsed = 00:01:00 . Memory (MB): peak = 603.191 ; gain = 396.406
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -452,10 +501,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 607.805 ; gain = 401.223
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:21 . Memory (MB): peak = 603.191 ; gain = 396.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 656.781 ; gain = 450.199
+Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:26 . Memory (MB): peak = 642.652 ; gain = 435.867
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -467,16 +516,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 662.805 ; gain = 456.223
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:27 . Memory (MB): peak = 660.375 ; gain = 453.590
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 662.805 ; gain = 456.223
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:15 ; elapsed = 00:01:27 . Memory (MB): peak = 660.375 ; gain = 453.590
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 662.805 ; gain = 456.223
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:15 ; elapsed = 00:01:27 . Memory (MB): peak = 660.375 ; gain = 453.590
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -493,7 +542,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 662.805 ; gain = 456.223
+Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:29 . Memory (MB): peak = 660.375 ; gain = 453.590
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -506,7 +555,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 662.805 ; gain = 456.223
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:29 . Memory (MB): peak = 660.375 ; gain = 453.590
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -518,25 +567,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 662.805 ; gain = 456.223
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:29 . Memory (MB): peak = 660.375 ; gain = 453.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 662.805 ; gain = 456.223
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:29 . Memory (MB): peak = 660.375 ; gain = 453.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 662.805 ; gain = 456.223
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:17 ; elapsed = 00:01:29 . Memory (MB): peak = 660.375 ; gain = 453.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 662.805 ; gain = 456.223
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:17 ; elapsed = 00:01:29 . Memory (MB): peak = 660.375 ; gain = 453.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -553,20 +602,20 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     3|
-|2     |CARRY4 |    79|
-|3     |LUT1   |   113|
-|4     |LUT2   |   140|
-|5     |LUT3   |    60|
-|6     |LUT4   |    74|
-|7     |LUT5   |   161|
-|8     |LUT6   |   345|
+|2     |CARRY4 |    87|
+|3     |LUT1   |   145|
+|4     |LUT2   |   156|
+|5     |LUT3   |    79|
+|6     |LUT4   |    69|
+|7     |LUT5   |   157|
+|8     |LUT6   |   275|
 |9     |MUXF7  |    12|
 |10    |FDCE   |    57|
 |11    |FDPE   |    16|
-|12    |FDRE   |   310|
-|13    |FDSE   |     5|
+|12    |FDRE   |   320|
+|13    |FDSE   |     4|
 |14    |LDC    |    16|
-|15    |IBUF   |    11|
+|15    |IBUF   |    10|
 |16    |OBUF   |    52|
 +------+-------+------+
 
@@ -574,27 +623,25 @@ Report Instance Areas:
 +------+--------------+-------------+------+
 |      |Instance      |Module       |Cells |
 +------+--------------+-------------+------+
-|1     |top           |             |  1454|
-|2     |  bin2pin     |bcpin        |    45|
-|3     |  dbbtnD      |debouncer    |    24|
-|4     |  dbbtnL      |debouncer_0  |    25|
-|5     |  dbbtnR      |debouncer_1  |    27|
-|6     |  dbbtnU      |debouncer_2  |    24|
-|7     |  downtimer   |downtime     |   242|
-|8     |  ledpwm      |ledpwm       |   218|
-|9     |  refTimer    |refreshTimer |    83|
-|10    |  secTimer    |secondsTimer |   113|
-|11    |  sevenSeg    |digits       |    79|
-|12    |  timeCounter |counter      |   508|
+|1     |top           |             |  1458|
+|2     |  bin2pin     |bcpin        |    46|
+|3     |  dbbtnL      |debouncer    |    25|
+|4     |  dbbtnR      |debouncer_0  |    27|
+|5     |  downtimer   |downtime     |   227|
+|6     |  ledpwm      |ledpwm       |   332|
+|7     |  refTimer    |refreshTimer |    83|
+|8     |  secTimer    |secondsTimer |   113|
+|9     |  sevenSeg    |digits       |    79|
+|10    |  timeCounter |counter      |   461|
 +------+--------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 662.805 ; gain = 456.223
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:17 ; elapsed = 00:01:29 . Memory (MB): peak = 660.375 ; gain = 453.590
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 662.805 ; gain = 159.844
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 662.805 ; gain = 456.223
+Synthesis finished with 0 errors, 0 critical warnings and 71 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:01:07 . Memory (MB): peak = 660.375 ; gain = 159.438
+Synthesis Optimization Complete : Time (s): cpu = 00:01:17 ; elapsed = 00:01:29 . Memory (MB): peak = 660.375 ; gain = 453.590
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 106 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -603,8 +650,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 16 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-83 Infos, 64 Warnings, 0 Critical Warnings and 0 Errors encountered.
+91 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 662.805 ; gain = 456.223
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 662.805 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue May 31 19:20:46 2016...
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:25 . Memory (MB): peak = 660.375 ; gain = 453.590
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 660.375 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 01 11:02:19 2016...

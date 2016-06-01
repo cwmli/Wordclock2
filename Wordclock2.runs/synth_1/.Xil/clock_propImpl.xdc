@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc} rfile:../../../Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc rfile:../../../Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]

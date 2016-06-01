@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="12" Path="C:/Users/Calvin/Documents/GitHub/Wordclock2/Wordclock2.xpr">
+<Project Version="7" Minor="12" Path="C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="94d716db59b240dfb534f9cce4892c8a"/>

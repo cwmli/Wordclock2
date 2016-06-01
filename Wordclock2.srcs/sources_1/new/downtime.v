@@ -42,6 +42,14 @@ module downtime(
     
     reg last_btnL;
     reg last_btnR;
+    
+    initial begin
+        dhr = 8'b0;
+        dmin = 8'b0;
+        
+        bhr = 8'b0;
+        bmin = 8'b00000001;
+    end
        
     
     always @ (posedge clk) begin
@@ -106,7 +114,7 @@ module downtime(
           down <= 1;
        else if(hr == dhr && min >= dmin)
           down <= 1;
-       else if(hr == bhr && min >= bmin)
+       else if(hr == bhr && min <= bmin)
           down <= 1;       
        else
           down <= 0; 

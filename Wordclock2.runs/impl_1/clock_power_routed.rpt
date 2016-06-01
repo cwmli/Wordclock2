@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
-| Date             : Tue May 31 19:22:00 2016
-| Host             : Calvin-PC running 64-bit major release  (build 9200)
+| Date             : Wed Jun 01 11:04:19 2016
+| Host             : Turtle-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file clock_power_routed.rpt -pb clock_power_summary_routed.pb -rpx clock_power_routed.rpx
 | Design           : clock
 | Device           : xc7a35tcpg236-1
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.085 |
-| Dynamic (W)              | 0.013 |
+| Total On-Chip Power (W)  | 0.100 |
+| Dynamic (W)              | 0.028 |
 | Device Static (W)        | 0.072 |
 | Effective TJA (C/W)      | 5.0   |
-| Max Ambient (C)          | 84.6  |
-| Junction Temperature (C) | 25.4  |
+| Max Ambient (C)          | 84.5  |
+| Junction Temperature (C) | 25.5  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -50,17 +50,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        3 |       --- |             --- |
-| Slice Logic    |     0.002 |     1321 |       --- |             --- |
-|   LUT as Logic |     0.002 |      708 |     20800 |            3.40 |
-|   CARRY4       |    <0.001 |       79 |      8150 |            0.97 |
-|   Register     |    <0.001 |      404 |     41600 |            0.97 |
+| Slice Logic    |     0.002 |     1289 |       --- |             --- |
+|   LUT as Logic |     0.002 |      669 |     20800 |            3.22 |
+|   CARRY4       |    <0.001 |       87 |      8150 |            1.07 |
+|   Register     |    <0.001 |      413 |     41600 |            0.99 |
 |   F7/F8 Muxes  |    <0.001 |       12 |     32600 |            0.04 |
-|   Others       |     0.000 |       24 |       --- |             --- |
+|   Others       |     0.000 |       20 |       --- |             --- |
 |   BUFG         |     0.000 |        2 |        32 |            6.25 |
-| Signals        |     0.002 |      949 |       --- |             --- |
-| I/O            |     0.007 |       63 |       106 |           59.43 |
+| Signals        |     0.002 |      923 |       --- |             --- |
+| I/O            |     0.022 |       62 |       106 |           58.49 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.085 |          |           |                 |
+| Total          |     0.100 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,8 +71,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.016 |       0.006 |      0.010 |
-| Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |
+| Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -139,14 +139,12 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| clock         |     0.013 |
+| clock         |     0.028 |
 |   bin2pin     |    <0.001 |
-|   dbbtnD      |    <0.001 |
 |   dbbtnL      |    <0.001 |
 |   dbbtnR      |    <0.001 |
-|   dbbtnU      |    <0.001 |
-|   downtimer   |     0.001 |
-|   ledpwm      |     0.001 |
+|   downtimer   |    <0.001 |
+|   ledpwm      |     0.002 |
 |   refTimer    |    <0.001 |
 |   secTimer    |    <0.001 |
 |   sevenSeg    |    <0.001 |

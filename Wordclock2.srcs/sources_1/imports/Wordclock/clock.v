@@ -89,5 +89,5 @@ module clock(
     
     bcpin bin2pin(digit_refclk, hour, minute, j1, j2, j3);
     
-    ledpwm ledpwm(clk, db_btnU, db_btnD, downtime, sw[0], j1, j2, j3, led, JA, JB, JC);
+    ledpwm ledpwm(clk, db_btnU, db_btnD, downtime, sw[0],  sw[2], j1, j2, j3, led, JA, JB, JC);
 endmodule

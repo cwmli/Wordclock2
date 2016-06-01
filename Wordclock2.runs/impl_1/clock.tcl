@@ -51,12 +51,12 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {E:/Documents/Calvin Works/Wordclock2/Wordclock2.cache/wt} [current_project]
-  set_property parent.project_path {E:/Documents/Calvin Works/Wordclock2/Wordclock2.xpr} [current_project]
-  set_property ip_repo_paths {{e:/Documents/Calvin Works/Wordclock2/Wordclock2.cache/ip}} [current_project]
-  set_property ip_output_repo {{e:/Documents/Calvin Works/Wordclock2/Wordclock2.cache/ip}} [current_project]
-  add_files -quiet {{E:/Documents/Calvin Works/Wordclock2/Wordclock2.runs/synth_1/clock.dcp}}
-  read_xdc {{E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc}}
+  set_property webtalk.parent_dir C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.xpr [current_project]
+  set_property ip_repo_paths c:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.cache/ip [current_project]
+  set_property ip_output_repo c:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.cache/ip [current_project]
+  add_files -quiet C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.runs/synth_1/clock.dcp
+  read_xdc C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc
   link_design -top clock -part xc7a35tcpg236-1
   write_hwdef -file clock.hwdef
   close_msg_db -file init_design.pb

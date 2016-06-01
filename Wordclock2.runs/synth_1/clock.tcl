@@ -10,27 +10,27 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {E:/Documents/Calvin Works/Wordclock2/Wordclock2.cache/wt} [current_project]
-set_property parent.project_path {E:/Documents/Calvin Works/Wordclock2/Wordclock2.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.cache/wt [current_project]
+set_property parent.project_path C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 read_verilog -library xil_defaultlib {
-  {E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v}
-  {E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v}
-  {E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/refreshTimer.v}
-  {E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/divider.v}
-  {E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/ledpwm.v}
-  {E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/bcd.v}
-  {E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/debouncer.v}
-  {E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/round.v}
-  {E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v}
-  {E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/clock.v}
+  C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/new/downtime.v
+  C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/counter.v
+  C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/refreshTimer.v
+  C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/divider.v
+  C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/ledpwm.v
+  C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/bcd.v
+  C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/debouncer.v
+  C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/round.v
+  C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/digits.v
+  C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/sources_1/imports/Wordclock/clock.v
 }
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc}}
-set_property used_in_implementation false [get_files {{E:/Documents/Calvin Works/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc}}]
+read_xdc C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Users/Turtle/Documents/GitHub/Wordclock2/Wordclock2.srcs/constrs_1/imports/Constraints/Basys3_Master.xdc]
 
 
 synth_design -top clock -part xc7a35tcpg236-1

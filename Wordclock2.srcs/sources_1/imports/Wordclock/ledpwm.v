@@ -26,6 +26,7 @@ module ledpwm(
         input btnD,
         input downtime,
         input sw,
+        input fade,
         input [7:0] pins1,
         input [7:0] pins2,
         input [7:0] pins3,
@@ -36,7 +37,8 @@ module ledpwm(
     );
     //5000 -> 10ms upper limit
     localparam constnum = 500; //1ms
-    localparam cycle = 20;
+    localparam fadecycle = 143; //143ms
+    localparam cycle = 20;//20ms
     
     reg last_btnU;
     reg last_btnD;
@@ -47,10 +49,26 @@ module ledpwm(
     
     reg [31:0] count;
     reg [7:0] width;
+    reg [31:0] binterval;
+    
+    reg [7:0] bsets [0:6];
+    
+    integer i;
+    reg decrease;
     
     initial begin
         bright = 5;
         dim = 1;
+        decrease = 0;
+        i = 0;
+        
+        bsets[0] = 0;
+        bsets[1] = 1;
+        bsets[2] = 2;
+        bsets[3] = 5;
+        bsets[4] = 10;
+        bsets[5] = 17;
+        bsets[6] = 20;
     end
     
     integer x;
@@ -87,8 +105,11 @@ module ledpwm(
         if (count == constnum - 1) begin
             count <= 32'b0;
             width <= width + 1;
+            binterval <= binterval + 1;
             if (width == cycle - 1)
                 width <= 4'b0;
+            if (binterval == fadecycle - 1)
+                binterval <= 8'b0;
         end else
             count <= count + 1;
     end
@@ -105,11 +126,25 @@ module ledpwm(
         end else
             led <= 0; 
         
-        if (downtime)
-            cwidth <= 1;
-        else
-            cwidth <= bright;  
+//        if (downtime)
+//            cwidth <= dim;
+//        else
+//            cwidth <= bright;  
     
+        if (binterval == fadecycle - 1 && fade) begin
+            cwidth <= bsets[i];
+            if (i == 6)
+                decrease <= 1;
+            else if (i == 0)
+                decrease <= 0;
+            
+            if (!decrease) begin
+                i <= i + 1;
+            end else begin
+                i <= i - 1;
+            end
+        end
+        
         if (width < cwidth) begin
             JA <= pins1;
             JB <= pins2;
