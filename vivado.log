@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Tue May 31 19:57:43 2016
+# Process ID: 8248
+# Current directory: C:/Users/Calvin/Documents/GitHub/Wordclock2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1456 C:\Users\Calvin\Documents\GitHub\Wordclock2\Wordclock2.xpr
+# Log file: C:/Users/Calvin/Documents/GitHub/Wordclock2/vivado.log
+# Journal file: C:/Users/Calvin/Documents/GitHub/Wordclock2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Calvin/Documents/GitHub/Wordclock2/Wordclock2.xpr
+INFO: [Project 1-313] Project file moved from 'E:/Documents/Calvin Works/Wordclock2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2016.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 746.383 ; gain = 98.617
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 31 19:58:33 2016...

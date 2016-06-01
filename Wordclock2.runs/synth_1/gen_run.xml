@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1464736791">
+  <File Type="RDS-PROPCONSTRS" Name="clock_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="clock.tcl"/>
+  <File Type="RDS-RDS" Name="clock.vds"/>
+  <File Type="RDS-UTIL" Name="clock_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="clock_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="clock.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="clock_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="clock_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/downtime.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="G:/Wordclock/wordclock.srcs/sources_1/new/downtime.v"/>
+        <Attr Name="ImportTime" Val="1464726276"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wordclock/counter.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="G:/Wordclock/counter.v"/>
+        <Attr Name="ImportTime" Val="1464726052"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wordclock/refreshTimer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="G:/Wordclock/refreshTimer.v"/>
+        <Attr Name="ImportTime" Val="1461760692"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wordclock/divider.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="G:/Wordclock/divider.v"/>
+        <Attr Name="ImportTime" Val="1461760692"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wordclock/ledpwm.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="G:/Wordclock/ledpwm.v"/>
+        <Attr Name="ImportTime" Val="1464705594"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wordclock/bcd.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="G:/Wordclock/bcd.v"/>
+        <Attr Name="ImportTime" Val="1461760692"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wordclock/debouncer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="G:/Wordclock/debouncer.v"/>
+        <Attr Name="ImportTime" Val="1462193750"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wordclock/round.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="G:/Wordclock/round.v"/>
+        <Attr Name="ImportTime" Val="1464699772"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wordclock/digits.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="G:/Wordclock/digits.v"/>
+        <Attr Name="ImportTime" Val="1464613450"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wordclock/clock.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="G:/Wordclock/clock.v"/>
+        <Attr Name="ImportTime" Val="1464725360"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Wordclock/ledtimer.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="G:/Wordclock/ledtimer.v"/>
+        <Attr Name="ImportTime" Val="1464613450"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="clock"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Constraints/Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="G:/Wordclock/Constraints/Basys3_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1464698778"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
