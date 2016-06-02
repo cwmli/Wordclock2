@@ -38,6 +38,7 @@ module clock(
     );
     
     wire seconds_clk;
+    wire ms_clk;
     wire digit_refclk;
     
     wire [7:0] hour;
@@ -60,6 +61,7 @@ module clock(
     wire [7:0] stime [0:3];
     wire [7:0] dtime [0:3];
     wire [7:0] utime [0:3];
+    wire [7:0] atime [0:3];
         
     //pin data
     wire [7:0] j1;
@@ -67,6 +69,7 @@ module clock(
     wire [7:0] j3;
         
     secondsTimer secTimer(clk, sw[13], seconds_clk);
+    mstimer msTimer(clk, sw[13], ms_clk);
     refreshTimer refTimer(clk, 1'b0, digit_refclk);  
     
     debouncer dbbtnL(clk, btnL, db_btnL); 
@@ -89,5 +92,5 @@ module clock(
     
     bcpin bin2pin(digit_refclk, hour, minute, j1, j2, j3);
     
-    ledpwm ledpwm(clk, db_btnU, db_btnD, downtime, sw[0],  sw[2], j1, j2, j3, led, JA, JB, JC);
+    ledpwm ledpwm(clk, ms_clk, db_btnU, db_btnD, downtime, sw[0],  sw[2], j1, j2, j3, led, JA, JB, JC);
 endmodule

@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
-| Date         : Wed Jun 01 11:03:22 2016
-| Host         : Turtle-PC running 64-bit major release  (build 9200)
+| Date         : Wed Jun 01 22:14:11 2016
+| Host         : Calvin-PC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file clock_control_sets_placed.rpt
 | Design       : clock
 | Device       : xc7a35t
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    75 |
-| Unused register locations in slices containing registers |   427 |
+| Number of unique control sets                            |    87 |
+| Unused register locations in slices containing registers |   454 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,12 +33,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              90 |           40 |
-| No           | No                    | Yes                    |              57 |           34 |
-| No           | Yes                   | No                     |             112 |           43 |
-| Yes          | No                    | No                     |              57 |           17 |
+| No           | No                    | No                     |             126 |           53 |
+| No           | No                    | Yes                    |              90 |           47 |
+| No           | Yes                   | No                     |              88 |           43 |
+| Yes          | No                    | No                     |              87 |           33 |
 | Yes          | No                    | Yes                    |              16 |           16 |
-| Yes          | Yes                   | No                     |              81 |           31 |
+| Yes          | Yes                   | No                     |             235 |           71 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -64,6 +64,12 @@ Table of Contents
 |  timeCounter/min_reg[5]_LDC_i_1_n_0 |                              | timeCounter/min_reg[5]_LDC_i_2_n_0 |                1 |              1 |
 |  timeCounter/min_reg[6]_LDC_i_1_n_0 |                              | timeCounter/min_reg[6]_LDC_i_2_n_0 |                1 |              1 |
 |  timeCounter/min_reg[7]_LDC_i_1_n_0 |                              | timeCounter/min_reg[7]_LDC_i_2_n_0 |                1 |              1 |
+|  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[5]_LDC_i_2_n_0  |                1 |              1 |
+|  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[6]_LDC_i_2_n_0  |                1 |              1 |
+|  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[7]_LDC_i_2_n_0  |                1 |              1 |
+|  seconds_clk_BUFG                   |                              | timeCounter/min_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  seconds_clk_BUFG                   |                              | timeCounter/min_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  seconds_clk_BUFG                   |                              | timeCounter/min_reg[2]_LDC_i_2_n_0 |                1 |              1 |
 |  seconds_clk_BUFG                   |                              | timeCounter/min_reg[3]_LDC_i_2_n_0 |                1 |              1 |
 |  seconds_clk_BUFG                   |                              | timeCounter/min_reg[4]_LDC_i_2_n_0 |                1 |              1 |
 |  seconds_clk_BUFG                   |                              | timeCounter/min_reg[5]_LDC_i_2_n_0 |                1 |              1 |
@@ -74,10 +80,10 @@ Table of Contents
 |  seconds_clk_BUFG                   | timeCounter/hr[7]_P_i_1_n_0  | timeCounter/hr_reg[2]_LDC_i_1_n_0  |                1 |              1 |
 |  seconds_clk_BUFG                   | timeCounter/hr[7]_P_i_1_n_0  | timeCounter/hr_reg[3]_LDC_i_1_n_0  |                1 |              1 |
 |  seconds_clk_BUFG                   | timeCounter/hr[7]_P_i_1_n_0  | timeCounter/hr_reg[4]_LDC_i_1_n_0  |                1 |              1 |
-|  seconds_clk_BUFG                   | timeCounter/hr[7]_P_i_1_n_0  | timeCounter/hr_reg[5]_LDC_i_1_n_0  |                1 |              1 |
+|  seconds_clk_BUFG                   | timeCounter/hr[7]_P_i_1_n_0  | timeCounter/hr_reg[6]_LDC_i_1_n_0  |                1 |              1 |
 |  seconds_clk_BUFG                   | timeCounter/hr[7]_P_i_1_n_0  | timeCounter/hr_reg[7]_LDC_i_1_n_0  |                1 |              1 |
-|  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[4]_LDC_i_2_n_0  |                1 |              1 |
 |  seconds_clk_BUFG                   | timeCounter/min[7]_P_i_1_n_0 | timeCounter/min_reg[0]_LDC_i_1_n_0 |                1 |              1 |
+|  digit_refclk_BUFG                  | sevenSeg/dp_i_1_n_0          |                                    |                1 |              1 |
 |  seconds_clk_BUFG                   | timeCounter/min[7]_P_i_1_n_0 | timeCounter/min_reg[1]_LDC_i_1_n_0 |                1 |              1 |
 |  seconds_clk_BUFG                   | timeCounter/min[7]_P_i_1_n_0 | timeCounter/min_reg[2]_LDC_i_1_n_0 |                1 |              1 |
 |  seconds_clk_BUFG                   | timeCounter/min[7]_P_i_1_n_0 | timeCounter/min_reg[3]_LDC_i_1_n_0 |                1 |              1 |
@@ -85,44 +91,50 @@ Table of Contents
 |  seconds_clk_BUFG                   | timeCounter/min[7]_P_i_1_n_0 | timeCounter/min_reg[5]_LDC_i_1_n_0 |                1 |              1 |
 |  seconds_clk_BUFG                   | timeCounter/min[7]_P_i_1_n_0 | timeCounter/min_reg[6]_LDC_i_1_n_0 |                1 |              1 |
 |  seconds_clk_BUFG                   | timeCounter/min[7]_P_i_1_n_0 | timeCounter/min_reg[7]_LDC_i_1_n_0 |                1 |              1 |
-|  seconds_clk_BUFG                   | timeCounter/hr[7]_P_i_1_n_0  | timeCounter/hr_reg[6]_LDC_i_1_n_0  |                1 |              1 |
-|  digit_refclk_BUFG                  | sevenSeg/dp_i_1_n_0          |                                    |                1 |              1 |
+|  seconds_clk_BUFG                   | timeCounter/hr[7]_P_i_1_n_0  | timeCounter/hr_reg[5]_LDC_i_1_n_0  |                1 |              1 |
 |  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[0]_LDC_i_2_n_0  |                1 |              1 |
 |  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[1]_LDC_i_2_n_0  |                1 |              1 |
 |  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[2]_LDC_i_2_n_0  |                1 |              1 |
 |  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[3]_LDC_i_2_n_0  |                1 |              1 |
-|  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[5]_LDC_i_2_n_0  |                1 |              1 |
-|  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[6]_LDC_i_2_n_0  |                1 |              1 |
-|  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[7]_LDC_i_2_n_0  |                1 |              1 |
-|  seconds_clk_BUFG                   |                              | timeCounter/min_reg[0]_LDC_i_2_n_0 |                1 |              1 |
-|  seconds_clk_BUFG                   |                              | timeCounter/min_reg[1]_LDC_i_2_n_0 |                1 |              1 |
-|  seconds_clk_BUFG                   |                              | timeCounter/min_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  seconds_clk_BUFG                   |                              | timeCounter/hr_reg[4]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                      | downtimer/bmin[7]_i_2_n_0    | downtimer/bmin0_in[6]              |                2 |              3 |
+|  clk_IBUF_BUFG                      | downtimer/dmin[7]_i_2_n_0    | downtimer/dmin0_in[6]              |                2 |              3 |
+|  digit_refclk_BUFG                  | sevenSeg/anm[3]_i_2_n_0      | sevenSeg/p_0_in                    |                1 |              4 |
 |  clk_IBUF_BUFG                      | timeCounter/uhr[4]_i_2_n_0   | timeCounter/uhr0_in[0]             |                2 |              4 |
 |  clk_IBUF_BUFG                      | dbbtnR/E[0]                  | timeCounter/uhr0_in[3]             |                2 |              4 |
 |  clk_IBUF_BUFG                      | downtimer/bhr[4]_i_2_n_0     | downtimer/bhr0_in[4]               |                1 |              4 |
 |  clk_IBUF_BUFG                      | downtimer/bhr[7]_i_2_n_0     | downtimer/bhr0_in[5]               |                2 |              4 |
-|  clk_IBUF_BUFG                      | downtimer/bmin[7]_i_2_n_0    | downtimer/bmin0_in[4]              |                3 |              4 |
 |  clk_IBUF_BUFG                      | downtimer/dhr[4]_i_2_n_0     | downtimer/dhr0_in[4]               |                1 |              4 |
 |  clk_IBUF_BUFG                      | downtimer/dhr[7]_i_2_n_0     | downtimer/dhr0_in[5]               |                2 |              4 |
-|  clk_IBUF_BUFG                      | downtimer/dmin[4]_i_2_n_0    | downtimer/dmin0_in[4]              |                2 |              4 |
-|  clk_IBUF_BUFG                      | downtimer/dmin[7]_i_2_n_0    | downtimer/dmin0_in[5]              |                2 |              4 |
-|  digit_refclk_BUFG                  |                              | timeCounter/JB_reg[3]              |                2 |              4 |
-|  clk_IBUF_BUFG                      | downtimer/bmin[7]_i_2_n_0    | downtimer/bmin0_in[5]              |                2 |              4 |
-|  digit_refclk_BUFG                  | sw_IBUF[1]                   |                                    |                1 |              4 |
-|  digit_refclk_BUFG                  | sevenSeg/anm[3]_i_2_n_0      | sevenSeg/p_0_in                    |                1 |              4 |
-|  clk_IBUF_BUFG                      | timeCounter/umin[5]_i_2_n_0  | timeCounter/umin0_in[5]            |                2 |              5 |
+|  digit_refclk_BUFG                  | sw_IBUF[1]                   |                                    |                2 |              4 |
+|  clk_IBUF_BUFG                      | timeCounter/umin[5]_i_2_n_0  | timeCounter/umin0_in[5]            |                3 |              5 |
+|  clk_IBUF_BUFG                      | downtimer/bmin[7]_i_2_n_0    | downtimer/bmin0_in[5]              |                4 |              5 |
+|  clk_IBUF_BUFG                      | downtimer/dmin[5]_i_2_n_0    | downtimer/dmin0_in[5]              |                1 |              5 |
+|  ms_clk_BUFG                        |                              | ledpwm/JB[4]_i_1_n_0               |                2 |              5 |
 |  digit_refclk_BUFG                  | sevenSeg/segm[6]_i_1_n_0     |                                    |                4 |              7 |
-|  clk_IBUF_BUFG                      | ledpwm/width                 |                                    |                2 |              8 |
-|  seconds_clk_BUFG                   |                              | sw_IBUF[13]                        |                3 |              8 |
-|  clk_IBUF_BUFG                      |                              | ledpwm/p_0_in                      |                3 |             10 |
-|  clk_IBUF_BUFG                      |                              | ledpwm/JA[7]_i_1_n_0               |                6 |             20 |
-|  clk_IBUF_BUFG                      |                              | ledpwm/count[31]_i_1_n_0           |                8 |             31 |
+|  ms_clk_BUFG                        |                              | ledpwm/JA[7]_i_1_n_0               |                2 |              7 |
+|  clk_IBUF_BUFG                      | ledpwm/bright                |                                    |                3 |              8 |
+|  clk_IBUF_BUFG                      | ledpwm/dim                   |                                    |                2 |              8 |
+|  ms_clk_BUFG                        |                              | ledpwm/JC[7]_i_1_n_0               |                5 |              8 |
+|  ms_clk_BUFG                        | ledpwm/p_0_in                |                                    |                1 |              8 |
+|  seconds_clk_BUFG                   |                              | sw_IBUF[13]                        |                2 |              8 |
+|  ms_clk_BUFG                        |                              |                                    |                5 |              9 |
+|  ms_clk_BUFG                        | ledpwm/i1_rep[4]_i_1_n_0     |                                    |                2 |             10 |
+|  ms_clk_BUFG                        |                              | ledpwm/led[9]_i_1_n_0              |                7 |             10 |
+|  ms_clk_BUFG                        | ledpwm/i2_rep[4]_i_1_n_0     |                                    |                4 |             10 |
+|  ms_clk_BUFG                        | ledpwm/i3_rep[4]_i_1_n_0     |                                    |                3 |             10 |
+|  digit_refclk_BUFG                  |                              | timeCounter/JC_reg[0][0]           |                3 |             11 |
+|  ms_clk_BUFG                        | sw_IBUF[2]                   |                                    |               11 |             21 |
 |  clk_IBUF_BUFG                      |                              | refTimer/freq                      |                8 |             31 |
-|  clk_IBUF_BUFG                      | ledpwm/binterval[31]_i_2_n_0 | ledpwm/binterval[31]_i_1_n_0       |                9 |             32 |
-|  clk_IBUF_BUFG                      |                              | sw_IBUF[13]                        |               15 |             33 |
-|  clk_IBUF_BUFG                      | ledpwm/cwidth[4]_i_1_n_0     |                                    |                9 |             37 |
-|  digit_refclk_BUFG                  |                              |                                    |               22 |             44 |
-|  clk_IBUF_BUFG                      |                              |                                    |               18 |             46 |
+|  ms_clk_BUFG                        | sw_IBUF[2]                   | ledpwm/fcnt1[31]_i_1_n_0           |                8 |             31 |
+|  ms_clk_BUFG                        | sw_IBUF[2]                   | ledpwm/fcnt2[31]_i_1_n_0           |                8 |             31 |
+|  ms_clk_BUFG                        | sw_IBUF[2]                   | ledpwm/icnt3[31]_i_1_n_0           |                8 |             31 |
+|  ms_clk_BUFG                        | sw_IBUF[2]                   | ledpwm/fcnt3[31]_i_1_n_0           |                8 |             31 |
+|  ms_clk_BUFG                        | sw_IBUF[2]                   | ledpwm/icnt1[31]_i_1_n_0           |                8 |             31 |
+|  ms_clk_BUFG                        | sw_IBUF[2]                   | ledpwm/icnt2[31]_i_1_n_0           |                8 |             31 |
+|  digit_refclk_BUFG                  |                              |                                    |               20 |             37 |
+|  clk_IBUF_BUFG                      |                              | sw_IBUF[13]                        |               29 |             66 |
+|  clk_IBUF_BUFG                      |                              |                                    |               28 |             80 |
 +-------------------------------------+------------------------------+------------------------------------+------------------+----------------+
 
 

@@ -36,7 +36,6 @@ module downtime(
         output reg down
     );
     
-    localparam minute = 8'b00111011;
     localparam hour = 8'b00111011;
     localparam hourLim = 8'b00010111;
     
@@ -81,10 +80,10 @@ module downtime(
         end else if (btnR && !last_btnR && (setdown || setup)) begin
              last_btnR <= btnR;
              if (setdown) begin
-                if (dmin == hourLim && !rev)
+                if (dmin == hour && !rev)
                     dmin <= 8'b0;
                 else if (dmin == 8'b0 && rev)
-                    dmin <= hourLim;
+                    dmin <= hour;
                 else begin
                     if (rev)
                         dmin <= dmin - 1'b1;
@@ -92,10 +91,10 @@ module downtime(
                         dmin <= dmin + 1'b1;
                 end
              end else if (setup) begin
-                if (bmin == hourLim && !rev)
+                if (bmin == hour && !rev)
                     bmin <= 8'b0;
                 else if (bmin == 8'b0 && rev)
-                    bmin <= hourLim;
+                    bmin <= hour;
                 else begin
                     if (rev)
                         bmin <= bmin - 1'b1;

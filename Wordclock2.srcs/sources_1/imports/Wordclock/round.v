@@ -93,7 +93,8 @@ module bcpin(
         if(rnd_min == 0 || rnd_min == 60) begin
             JA[7] <= 0;
             JA[6] <= 0;
-            res_hour = res_hour + 1;
+            if(rnd_min == 60)
+                res_hour = res_hour + 1;
         end else if(rnd_min <= 30) begin
             JA[7] <= 1;
         end else if(rnd_min > 30) begin
