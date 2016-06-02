@@ -70,16 +70,19 @@ module ledpwm(
         bright = 5;
         dim = 1;
         
-        i1 = 0;
+        i1 = 10;
         i2 = 5;
-        i3 = 10;
+        i3 = 0;
         
         //fade delays
+        icnt1 = 0;
+        fcnt1 = 500;
+        
         icnt2 = 0;
         fcnt2 = 250;
         
         icnt3 = 0;
-        fcnt3 = 500;
+        fcnt3 = 0;
         
         bsets[0] = 0;
         bsets[1] = 1;
@@ -234,12 +237,12 @@ module ledpwm(
             else 
                 JA <= 8'b0;
                 
-            if (width < cw2)
+            if (width < cw3)
                 JB <= pins2;
             else 
                 JB <= 8'b0;
                 
-            if (width < cw3)
+            if (width < cw2)
                 JC <= pins3;
             else 
                 JC <= 8'b0;

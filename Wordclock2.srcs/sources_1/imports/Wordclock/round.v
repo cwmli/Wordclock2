@@ -47,9 +47,9 @@ module bcpin(
     //JA3 - JA[2] = TEN              JC3 - JC[2] = TWO     JB3 - JB[2] = TEN 
     //JA4 - JA[3] = QUARTER          JC4 - JC[3] = NINE    JB4 - JB[3] = SIX
     //JA7 - JA[4] = TWENTY           JC7 - JC[4] = THREE   JB7 - JB[4] = O_CLOCK
-    //JA8 - JA[5] = FIVE             JC8 - JC[5] = TWELVE 
-    //JA9 - JA[6] = TO               JC9 - JC[6] = ELEVEN 
-    //JA10 - JA[7] = PAST            JC10 - JC[7] = ONE
+    //JA8 - JA[5] = FIVE             JC8 - JC[5] = TWELVE  JB8 - JB[5] = ELEVEN
+    //JA9 - JA[6] =                  JC9 - JC[6] = TO      JB9 - JB[6] = ONE
+    //JA10 - JA[7] =                 JC10 - JC[7] = PAST
                 
     integer res_hour;
     integer rnd_min;
@@ -91,14 +91,14 @@ module bcpin(
         
         //check whether past or to
         if(rnd_min == 0 || rnd_min == 60) begin
-            JA[7] <= 0;
-            JA[6] <= 0;
+            JC[7] <= 0;
+            JC[6] <= 0;
             if(rnd_min == 60)
                 res_hour = res_hour + 1;
         end else if(rnd_min <= 30) begin
-            JA[7] <= 1;
+            JC[7] <= 1;
         end else if(rnd_min > 30) begin
-            JA[6] <= 1;
+            JC[6] <= 1;
             res_hour = res_hour + 1;
         end      
         
@@ -121,10 +121,10 @@ module bcpin(
         end
         
         //check hour
-        if(res_hour == 0) begin 
+        if(res_hour == 0 || res_hour == 12) begin 
             JC[5] <= 1;
         end else if(res_hour == 1 || res_hour == 13) begin
-            JC[7] <= 1;
+            JB[6] <= 1;
         end else if(res_hour == 2 || res_hour == 14) begin
             JC[2] <= 1;
         end else if(res_hour == 3 || res_hour == 15) begin
@@ -144,7 +144,7 @@ module bcpin(
         end else if(res_hour == 10 || res_hour == 22) begin
             JB[2] <= 1;
         end else begin //hour 11
-            JC[6] <= 1;
+            JB[5] <= 1;
         end   
     end    
 endmodule
