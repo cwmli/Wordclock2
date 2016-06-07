@@ -26,6 +26,7 @@ module ledpwm(
         input btnU,
         input btnD,
         input downtime,
+        input alarmsig,
         input sw,
         input fade,
         input [7:0] pins1,
@@ -38,7 +39,10 @@ module ledpwm(
     );
     localparam fadecycle = 3250; //2000ms / 2s on for 1000-2000, off for 3000 - 3250
     localparam lightincr = 50; //50ms
+    localparam alarmincr = 10000; //10000ms 10s
     localparam cycle = 20;//20ms
+    
+    localparam beeplength = 250; //250ms
     
     reg last_btnU;
     reg last_btnD;
@@ -49,6 +53,9 @@ module ledpwm(
     
     reg [31:0] count;
     reg [7:0] width;
+    
+    reg [31:0] alarmincrwidth;
+    reg [15:0] alarmwidth;
     
     reg [31:0] icnt1;
     reg [31:0] icnt2;
@@ -61,14 +68,19 @@ module ledpwm(
     reg [7:0] cw3;
     
     reg [7:0] bsets [0:19];
+    reg [15:0] adsets [0:5]; //alarm delays
     
     reg [7:0] i1;
     reg [7:0] i2;
     reg [7:0] i3;
     
+    integer a;
+    
     initial begin
         bright = 5;
         dim = 1;
+        
+        a = 0;
         
         i1 = 10;
         i2 = 5;
@@ -83,6 +95,13 @@ module ledpwm(
         
         icnt3 = 0;
         fcnt3 = 0;
+        
+        adsets[0] = 1000;
+        adsets[1] = 900;
+        adsets[2] = 750;
+        adsets[3] = 550;
+        adsets[4] = 300;
+        adsets[5] = 0;
         
         bsets[0] = 0;
         bsets[1] = 1;
@@ -139,6 +158,12 @@ module ledpwm(
         width <= width + 1;
         if (width == cycle - 1)
             width <= 4'b0;
+         
+        if (alarmsig) begin   
+            alarmincrwidth <= alarmincrwidth + 1;
+            if (alarmincrwidth == alarmincr - 1)
+                alarmincrwidth <= 32'b0;
+        end
         
         if (fade) begin        
             fcnt1 <= fcnt1 + 1;
@@ -204,24 +229,57 @@ module ledpwm(
                 cwidth <= bright;  
         end
         
-        if (sw && !fade) begin
-            for(x = 0; x < 10; x = x + 1) begin
-                if(x < cwidth / 2)
-                    led[x] <= 1;
+        if (alarmsig) begin
+            //speed up timer of alarm
+            if (alarmincrwidth == alarmincr - 1) begin
+                if (a < 6) 
+                    a <= a + 1;
                 else
-                    led[x] <= 0;
+                    a <= a;
             end
-        end else if (fade && sw) begin
-            for(x = 0; x < 10; x = x + 1) begin
-                if(x < cw1 / 2)
-                    led[x] <= 1;
-                else
-                    led[x] <= 0;
-            end
-        end else
-            led <= 0; 
+            
+            //alarm width
+            alarmwidth <= alarmwidth + 1;
+            if (alarmwidth >= adsets[a] + beeplength)
+                alarmwidth <= 16'b0;
+        end else begin
+            a <= 0;
+            alarmwidth <= 16'b0;
+        end                  
         
-        if (!fade) begin
+        if (!alarmsig) begin      
+            if (sw && !fade) begin
+                for(x = 0; x < 10; x = x + 1) begin
+                    if(x < cwidth / 2)
+                        led[x] <= 1;
+                    else
+                        led[x] <= 0;
+                end
+            end else if (fade && sw) begin
+                for(x = 0; x < 10; x = x + 1) begin
+                    if(x < cw1 / 2)
+                        led[x] <= 1;
+                    else
+                        led[x] <= 0;
+                end
+            end else
+                led <= 0;
+        end
+            
+        if (alarmsig) begin 
+            if (alarmwidth > adsets[a] && alarmwidth < adsets[a] + beeplength) begin
+                JA <= pins1;
+                JA[7] <= 1;
+                led <= 15'b111111111111111;
+                JB <= pins2;
+                JC <= pins3;
+            end else begin
+                led <= 15'b000000000000000;
+                JA <= 8'b0;
+                JB <= 8'b0;
+                JC <= 8'b0;
+            end
+        end else if (!fade) begin
             if (width < cwidth) begin
                 JA <= pins1;
                 JB <= pins2;
@@ -246,6 +304,6 @@ module ledpwm(
                 JC <= pins3;
             else 
                 JC <= 8'b0;
-        end            
+        end  
     end
 endmodule

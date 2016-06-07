@@ -24,12 +24,13 @@ module digits(
         input refFreq,
         input secFreq,
         input active,
-        input disptime,
         input dispdtime,
         input disputime,
+        input dispatime,
         input [7:0] num1a, input [7:0] num1b, input [7:0] num1c, input [7:0] num1d,
         input [7:0] num2a, input [7:0] num2b, input [7:0] num2c, input [7:0] num2d,
         input [7:0] num3a, input [7:0] num3b, input [7:0] num3c, input [7:0] num3d,
+        input [7:0] num4a, input [7:0] num4b, input [7:0] num4c, input [7:0] num4d,
         output reg [6:0] segm,
         output reg [3:0] anm,
         output reg dp
@@ -54,6 +55,11 @@ module digits(
             activenum2 <= num2b;
             activenum3 <= num2c;
             activenum4 <= num2d;
+        end else if (dispatime) begin
+            activenum1 <= num4a;
+            activenum2 <= num4b;
+            activenum3 <= num4c;
+            activenum4 <= num4d;        
         end else begin
             activenum1 <= num1a;
             activenum2 <= num1b;

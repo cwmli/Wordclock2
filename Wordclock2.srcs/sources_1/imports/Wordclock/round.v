@@ -49,7 +49,7 @@ module bcpin(
     //JA7 - JA[4] = TWENTY           JC7 - JC[4] = THREE   JB7 - JB[4] = O_CLOCK
     //JA8 - JA[5] = FIVE             JC8 - JC[5] = TWELVE  JB8 - JB[5] = ELEVEN
     //JA9 - JA[6] =                  JC9 - JC[6] = TO      JB9 - JB[6] = ONE
-    //JA10 - JA[7] =                 JC10 - JC[7] = PAST
+    //JA10 - JA[7] =  ALARMSIGNAL    JC10 - JC[7] = PAST
                 
     integer res_hour;
     integer rnd_min;

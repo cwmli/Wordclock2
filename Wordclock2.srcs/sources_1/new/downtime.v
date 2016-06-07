@@ -26,6 +26,8 @@ module downtime(
         input [7:0] min,        
         input setdown,
         input setup,
+        input setalarm,
+        input alarmon,
         input rev,
         input btnL,
         input btnR,
@@ -33,6 +35,9 @@ module downtime(
         output reg [7:0] dmin,
         output reg [7:0] bhr,
         output reg [7:0] bmin,
+        output reg [7:0] ahr,
+        output reg [7:0] amin,
+        output reg alarm,
         output reg down
     );
     
@@ -48,11 +53,14 @@ module downtime(
         
         bhr = 8'b0;
         bmin = 8'b00000001;
+        
+        ahr = 8'b0;
+        amin = 8'b0;
     end
        
     
     always @ (posedge clk) begin
-       if (btnL && !last_btnL && (setdown || setup)) begin
+       if (btnL && !last_btnL && (setdown || setup || setalarm)) begin
             last_btnL <= btnL;
             if (setdown) begin
                 if (dhr == hourLim && !rev)
@@ -76,8 +84,19 @@ module downtime(
                     else
                         bhr <= bhr + 1'b1;
                 end
+             end else if (setalarm) begin
+                 if (ahr == hourLim && !rev)
+                     ahr <= 8'b0;
+                 else if (ahr == 8'b0 && rev)
+                     ahr <= hourLim;
+                 else begin
+                     if (rev)
+                         ahr <= ahr - 1'b1;
+                     else
+                         ahr <= ahr + 1'b1;
+                 end             
              end
-        end else if (btnR && !last_btnR && (setdown || setup)) begin
+        end else if (btnR && !last_btnR && (setdown || setup || setalarm)) begin
              last_btnR <= btnR;
              if (setdown) begin
                 if (dmin == hour && !rev)
@@ -101,6 +120,17 @@ module downtime(
                     else
                         bmin <= bmin + 1'b1;
                 end
+             end else if (setalarm) begin
+                 if (amin == hour && !rev)
+                    amin <= 8'b0;
+                 else if (bmin == 8'b0 && rev)
+                     amin <= hour;
+                 else begin
+                     if (rev)
+                         amin <= amin - 1'b1;
+                     else
+                         amin <= amin + 1'b1;
+                 end             
              end
         end else if (!btnL && !btnR) begin
             last_btnL <= btnL;
@@ -117,6 +147,11 @@ module downtime(
           down <= 1;       
        else
           down <= 0; 
+          
+       if (hr == ahr && min == amin && alarmon)
+          alarm <= 1;
+       else
+          alarm <= 0;
     end
     
 endmodule

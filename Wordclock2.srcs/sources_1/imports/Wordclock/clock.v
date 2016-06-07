@@ -48,6 +48,8 @@ module clock(
     wire [7:0] dminute;
     wire [7:0] uhour;
     wire [7:0] uminute;
+    wire [7:0] ahour;
+    wire [7:0] aminute;
         
     wire db_btnL;
     wire db_btnR;
@@ -55,6 +57,7 @@ module clock(
     wire db_btnD;
     
     wire downtime;
+    wire alarmtime;
          
     //segment displays
     // 4 3 : 2 1
@@ -68,8 +71,8 @@ module clock(
     wire [7:0] j2;
     wire [7:0] j3;
         
-    secondsTimer secTimer(clk, sw[13], seconds_clk);
-    mstimer msTimer(clk, sw[13], ms_clk);
+    secondsTimer secTimer(clk, sw[12], seconds_clk);
+    mstimer msTimer(clk, ms_clk);
     refreshTimer refTimer(clk, 1'b0, digit_refclk);  
     
     debouncer dbbtnL(clk, btnL, db_btnL); 
@@ -77,20 +80,22 @@ module clock(
     debouncer dbbtnU(clk, btnU, db_btnU);
     debouncer dbbtnD(clk, btnD, db_btnD);
         
-    counter timeCounter(clk, seconds_clk, btnC, sw[13], db_btnL, db_btnR, hour, minute); 
+    counter timeCounter(clk, seconds_clk, btnC, sw[12], db_btnL, db_btnR, hour, minute); 
     bcd bin2digit(hour, minute, stime[3], stime[2], stime[1], stime[0]);
     
-    downtime downtimer(clk, hour, minute, sw[15], sw[14], btnC, db_btnL, db_btnR, dhour, dminute, uhour, uminute, downtime); 
+    downtime downtimer(clk, hour, minute, sw[15], sw[14], sw[13], sw[3], btnC, db_btnL, db_btnR, uhour, uminute, dhour, dminute, ahour, aminute, alarmtime, downtime); 
     bcd dbin2digit(dhour, dminute, dtime[3], dtime[2], dtime[1], dtime[0]);
     bcd ubin2digit(uhour, uminute, utime[3], utime[2], utime[1], utime[0]);
+    bcd abin2digit(ahour, aminute, atime[3], atime[2], atime[1], atime[0]);
     
-    digits sevenSeg(digit_refclk, seconds_clk, sw[1], sw[13], sw[15], sw[14], 
+    digits sevenSeg(digit_refclk, seconds_clk, sw[1], sw[14], sw[15], sw[13], 
                     stime[0], stime[1], stime[2], stime[3], 
                     dtime[0], dtime[1], dtime[2], dtime[3], 
-                    utime[0], utime[1], utime[2], utime[3], 
+                    utime[0], utime[1], utime[2], utime[3],
+                    atime[0], atime[1], atime[2], atime[3], 
                     seg, an, dp);
     
     bcpin bin2pin(digit_refclk, hour, minute, j1, j2, j3);
     
-    ledpwm ledpwm(clk, ms_clk, db_btnU, db_btnD, downtime, sw[0],  sw[2], j1, j2, j3, led, JA, JB, JC);
+    ledpwm ledpwm(clk, ms_clk, db_btnU, db_btnD, downtime, alarmtime, sw[0], sw[2], j1, j2, j3, led, JA, JB, JC);
 endmodule
