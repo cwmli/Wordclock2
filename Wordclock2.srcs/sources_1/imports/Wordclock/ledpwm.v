@@ -100,8 +100,8 @@ module ledpwm(
         adsets[1] = 900;
         adsets[2] = 750;
         adsets[3] = 550;
-        adsets[4] = 300;
-        adsets[5] = 0;
+        adsets[4] = 350;
+        adsets[5] = 250;
         
         bsets[0] = 0;
         bsets[1] = 1;

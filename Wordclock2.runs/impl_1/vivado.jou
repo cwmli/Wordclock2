@@ -2,8 +2,8 @@
 # Vivado v2016.1 (64-bit)
 # SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
 # IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
-# Start of session at: Tue Jun 07 19:06:45 2016
-# Process ID: 11144
+# Start of session at: Wed Jun 08 16:59:52 2016
+# Process ID: 8100
 # Current directory: C:/Users/Calvin/Documents/GitHub/Wordclock2/Wordclock2.runs/impl_1
 # Command line: vivado.exe -log clock.vdi -applog -messageDb vivado.pb -mode batch -source clock.tcl -notrace
 # Log file: C:/Users/Calvin/Documents/GitHub/Wordclock2/Wordclock2.runs/impl_1/clock.vdi
